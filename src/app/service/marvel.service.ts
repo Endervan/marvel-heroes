@@ -8,7 +8,7 @@ import {map} from 'rxjs/operators';
 })
 export class MarvelService {
   private API_KEY = '&apikey=5a237863b3cc2061003cbbc4fe20dc06';
-  TS = '?ts=1';
+  private TS = '?ts=1';
   private PRIVATE_KEY = 'fbf255068eccea6d0ef951b9f25626b57ab2fe72';
   private HASH = '&hash=bd4b447a65ef5d6b174f87cf9db6d2db';
   private API_URL = 'https://gateway.marvel.com/v1/public/';

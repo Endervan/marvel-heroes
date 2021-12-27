@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  NPM_CONFIG_PRODUCTION: false,
 };

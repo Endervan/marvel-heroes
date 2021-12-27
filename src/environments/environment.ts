@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  NPM_CONFIG_PRODUCTION: false,
 };
 
 
