@@ -6,16 +6,16 @@ import {MarvelService} from '../../service/marvel.service';
 @Component({
   selector: 'app-marvel-character',
   templateUrl: './marvel-character.component.html',
-  styleUrls: ['./marvel-character.component.css']
+  styleUrls: ['./marvel-character.component.css'],
 })
 export class MarvelCharacterComponent implements OnInit {
 
   characters: Observable<any>;
 
-  constructor(private MarvelService: MarvelService, private router: Router) {}
+  constructor(private marvelService: MarvelService, private router: Router) {}
 
   ngOnInit() {
-    this.characters = this.MarvelService.getAllCharacter();
+    this.characters = this.marvelService.getAllCharacter();
   }
 
   showComics(id: number) {
