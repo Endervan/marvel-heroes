@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Heroes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-spinner *ngIf="!heroes" name="crescent" class="spinner"></ion-spinner>
+
+<div *ngIf="screenWidth > 768" class="content-desktop">
+  <ion-card class="card" *ngFor="let hero of heroes">
+    <ion-card-header style="padding: 0;">
+      <img src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}" class="img-desktop" />
+      <div class="card-title">
+        <ion-card-subtitle class="title">{{ hero.name }}</ion-card-subtitle>
+        <ion-button fill="clear" class="button">Detalhes</ion-button>
+      </div>
+    </ion-card-header>
+  </ion-card>
+</div>
+
+<div *ngIf="screenWidth <= 780" class="content-mobile">
+  <ion-card class="card-mobile" col-12 *ngFor="let hero of heroes">
+    <ion-card-header class="header-mobile">
+      <div class="header-title">
+        <img src="{{ hero.thumbnail.path }}.{{ hero.thumbnail.extension }}" class="img-mobile" />
+        <ion-card-title class="title">{{ hero.name }}</ion-card-title>
+      </div>
+      <ion-card-subtitle class="bio">{{ hero.description }}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</div>
