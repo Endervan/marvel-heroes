@@ -1,16 +1,38 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routing.module';
+import { MarvelCharacterComponent } from './marvel/marvel-character/marvel-character.component';
+import { MarvelComicsComponent } from './marvel/marvel-comics/marvel-comics.component';
+import { MarvelEventsComponent } from './marvel/marvel-events/marvel-events.component';
+import { MarvelSeriesComponent } from './marvel/marvel-series/marvel-series.component';
+import { MarvelStoriesComponent } from './marvel/marvel-stories/marvel-stories.component';
+import { TruncatePipe } from './pipe/truncate-pipe';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent],
+  declarations: [
+    AppComponent,
+    MarvelCharacterComponent,
+    MarvelComicsComponent,
+    MarvelEventsComponent,
+    MarvelSeriesComponent,
+    MarvelStoriesComponent,
+    TruncatePipe
+  ],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    RouterModule,
+    AppRoutingModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
