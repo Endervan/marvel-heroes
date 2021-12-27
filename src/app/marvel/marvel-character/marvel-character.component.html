@@ -5,7 +5,7 @@
         <img class="card-img-top" src="{{character.thumbnail.path}}/portrait_xlarge.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{character.name}}</h5>
-          <p class="card-text">{{character.description | truncate:12 : true }}</p>
+          <p class="card-text">{{character.description | truncate:50 : true }}</p>
           <div class="btn-group">
             <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               + Detalhes
