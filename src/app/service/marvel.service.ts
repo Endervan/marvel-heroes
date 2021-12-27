@@ -7,11 +7,16 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class MarvelService {
+  API_KEY = '5a237863b3cc2061003cbbc4fe20dc06';
+  TS = '1';
+  PRIVATE_KEY = 'fbf255068eccea6d0ef951b9f25626b57ab2fe72';
+  HASH = 'bd4b447a65ef5d6b174f87cf9db6d2db';
   API_URL = 'https://gateway.marvel.com/v1/public/';
-  KEY = '?ts=16185334990410&apikey=f819f3621f81dde7edc382743d93d41c&hash=968c51ae154e70c54a0d0dd4fb5f405d';
+  KEY = `?ts=${this.TS}&apikey=${this.API_KEY}&hash=${this.HASH}`;
 
   constructor(
     private http: HttpClient) {
+    console.log(this.API_URL + 'characters' + this.KEY);
   }
 
   getAllCharacter(): Observable<any> {
