@@ -1,14 +1,14 @@
 {
-  "name": "api-marvel",
-  "version": "0.0.0",
+  "name":"api-marvel",
+  "version":"0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "web": "node server.js",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng":"ng",
+    "start":"ng serve",
+    "web":"node server.js",
+    "build":"ng build",
+    "test":"ng test",
+    "lint":"ng lint",
+    "e2e":"ng e2e"
   },
   "private": true,
   "dependencies": {
