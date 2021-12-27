@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "web": "node server.js",
+    "start": "node server.js",
+    "web": "node app.js",
     "postinstall": "npm run build",
     "build": "ng build",
     "test": "ng test",
@@ -47,5 +47,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.5"
+  },
+  "engines": {
+    "node": ">=14.0.O",
+    "npm": ">=7.7.0"
   }
 }
