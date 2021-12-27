@@ -1,0 +1,10 @@
+.jumbotron{
+    background-image: url('/assets/imgs/marvel-todo.jpg');
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.card{
+    margin: 1rem;
+}

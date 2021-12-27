@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <div class="row">
+    <div *ngFor="let character of characters | async" class="card" style="width: 18rem;">
+      <div class="col-sm">
+        <img class="card-img-top" src="{{character.thumbnail.path}}/portrait_xlarge.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{character.name}}</h5>
+          <p class="card-text">{{character.description }}</p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              + Detalhes
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="showComics(character.id)">Comics</a></li>
+              <li><a class="dropdown-item" (click)="showEvents(character.id)">Events</a></li>
+              <li><a class="dropdown-item" (click)="showSeries(character.id)">Series</a></li>
+              <li><a class="dropdown-item" (click)="showStories(character.id)">Stories</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
