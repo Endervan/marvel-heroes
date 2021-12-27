@@ -13,7 +13,6 @@ import {MarvelEventsComponent} from './marvel/marvel-events/marvel-events.compon
 import {MarvelSeriesComponent} from './marvel/marvel-series/marvel-series.component';
 import {MarvelStoriesComponent} from './marvel/marvel-stories/marvel-stories.component';
 import {PipeModule} from './pipe/pipe.module';
-import {TruncatePipe} from './pipe/truncate-pipe';
 
 @NgModule({
   declarations: [
